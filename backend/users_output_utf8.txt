@@ -1,0 +1,2 @@
+ID: 1, Pseudo: 'Admin', Real: 'IT Admin', Email: 'admin@kaartech.com', Role: 'ADMIN'
+ID: 2, Pseudo: 'jenita_04', Real: 'jeni', Email: 'jeni@kaartech.com', Role: 'EMPLOYEE'

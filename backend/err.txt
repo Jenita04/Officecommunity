@@ -1,0 +1,7 @@
+2 validation errors for CommentResponse
+author
+  Input should be a valid dictionary or instance of UserBase [type=model_type, input_value=<models.domain.User object at 0x000001E21FFFFC80>, input_type=User]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+replies
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type

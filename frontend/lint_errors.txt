@@ -1,0 +1,96 @@
+﻿
+> frontend@0.1.0 lint
+> eslint
+
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\app\discovery\page.tsx
+  11:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  83:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\app\failures\page.tsx
+  10:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  13:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\app\login\page.tsx
+  28:19  error  Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  96:14  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\app\page.tsx
+  14:5   error  Error: Cannot access variable before it is declared
+
+`fetchPosts` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\app\page.tsx:14:5
+  12 |
+  13 |   useEffect(() => {
+> 14 |     fetchPosts();
+     |     ^^^^^^^^^^ `fetchPosts` accessed before it is declared
+  15 |   }, []);
+  16 |
+  17 |   const fetchPosts = async () => {
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\app\page.tsx:17:3
+  15 |   }, []);
+  16 |
+> 17 |   const fetchPosts = async () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |     const data = await getPosts();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 19 |     setPosts(data);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 20 |   };
+     | ^^^^^ `fetchPosts` is declared here
+  21 |
+  22 |   const handleCreatePost = async (data: any) => {
+  23 |     const newPost = await createPost(data);  react-hooks/immutability
+  22:41  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+  60:36  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react/no-unescaped-entities
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\app\profile\page.tsx
+   6:10  warning  'UserCircle' is defined but never used     @typescript-eslint/no-unused-vars
+   6:38  warning  'ShieldAlert' is defined but never used    @typescript-eslint/no-unused-vars
+  20:11  warning  'user' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\app\register\page.tsx
+  47:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\components\CreatePostModal.tsx
+  10:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\components\LeaderboardWidget.tsx
+  7:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\components\LogFailureModal.tsx
+  9:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\components\PostCard.tsx
+  11:10  warning  'innovative' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  11:22  warning  'setInnovative' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  22:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\components\PostCard.tsx:22:7
+  20 |     const savedIds = JSON.parse(localStorage.getItem('savedPosts') || '[]');
+  21 |     if (savedIds.includes(post.id)) {
+> 22 |       setIsSaved(true);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  23 |     }
+  24 |   }, [post.id]);
+  25 |     react-hooks/set-state-in-effect
+  93:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @next/next/no-img-element
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\components\Topbar.tsx
+  22:54  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\JENI\OneDrive\Desktop\kaartech project ag\frontend\lib\api.ts
+   47:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  111:66  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 24 problems (18 errors, 6 warnings)
+
