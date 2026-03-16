@@ -182,7 +182,7 @@ export default function FailureWall() {
                   </div>
                   
                   <button 
-                    onClick={() => handleUseful(failure.id)}
+                    onClick={() => handleUseful(Number(failure.id))}
                     style={{ 
                       display: 'flex', alignItems: 'center', gap: '0.4rem', 
                       background: 'none', border: 'none', cursor: 'pointer',
