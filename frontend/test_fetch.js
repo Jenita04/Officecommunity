@@ -1,5 +1,5 @@
 // test_fetch.js
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://kaartechapi.onrender.com/api';
 const postId = 1;
 const commentId = 1;
 const status = 'RESOLVED';

@@ -1,5 +1,5 @@
 // test_fetch_auth.js
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://kaartechapi.onrender.com/api';
 // We'll first login to get a token
 async function run() {
   try {
