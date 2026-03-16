@@ -1,4 +1,4 @@
-annotated-doc==0.0.4
+﻿annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.12.1
 bcrypt==5.0.0
@@ -13,9 +13,11 @@ greenlet==3.3.2
 gunicorn==25.1.0
 h11==0.16.0
 idna==3.11
-numpy==2.2.6
+numpy==2.4.3
 packaging==26.0
 passlib==1.7.4
+psycopg==3.3.3
+psycopg-binary==3.3.3
 psycopg2-binary==2.9.11
 pyasn1==0.6.2
 pycparser==3.0
@@ -32,4 +34,5 @@ SQLAlchemy==2.0.48
 starlette==0.52.1
 typing-inspection==0.4.2
 typing_extensions==4.15.0
+tzdata==2025.3
 uvicorn==0.41.0
