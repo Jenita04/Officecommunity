@@ -45,6 +45,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000", 
         "https://kaartech-frontend.onrender.com",
+        "https://kaartech-frontend1.onrender.com",
         "https://kaartech-frontend-v2.onrender.com", 
         "*" # Temporarily allowing all until frontend is fully deployed to prevent CORS errors during setup. 
             # Once you have your exact frontend URL, replace "*" with it or use the FRONTEND_URL env var.
