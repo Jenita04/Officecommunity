@@ -3,7 +3,13 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from core.config import settings
 
-connect_args = {"check_same_thread": False} if settings.SQLALCHEMY_DATABASE_URI.startswith("sqlite") else {}
+if settings.SQLALCHEMY_DATABASE_URI.startswith("sqlite"):
+    connect_args = {"check_same_thread": False}
+elif settings.SQLALCHEMY_DATABASE_URI.startswith("postgresql"):
+    # Fix for SQLAlchemy 2.0 + psycopg 3 + NeonDB Pooler (Render)
+    connect_args = {"sslmode": "require"}
+else:
+    connect_args = {}
 
 engine = create_engine(
     settings.SQLALCHEMY_DATABASE_URI, connect_args=connect_args
