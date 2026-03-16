@@ -1,4 +1,3 @@
-// API Base
 export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://kaartechapi.onrender.com/api';
 
 export interface Comment {
