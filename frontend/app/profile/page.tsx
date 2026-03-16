@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import LayoutWrapper from '@/components/LayoutWrapper';
 import { useUser } from '@/lib/UserContext';
 import { Save, Settings, BadgeCheck, FileText, Target, AlertTriangle, Zap, Clock, ThumbsUp, Trash2, Edit2, MessageSquare } from 'lucide-react';
-import { Post, getPosts, getMyPosts, deletePost, updatePost, Innovation, Failure, getMyInnovations, getMyFailures, deleteInnovation, updateInnovation, deleteFailure, updateFailure, Suggestion, getMySuggestions, deleteSuggestion, updateSuggestion } from '@/lib/api';
+import { API_URL, Post, getPosts, getMyPosts, deletePost, updatePost, Innovation, Failure, getMyInnovations, getMyFailures, deleteInnovation, updateInnovation, deleteFailure, updateFailure, Suggestion, getMySuggestions, deleteSuggestion, updateSuggestion } from '@/lib/api';
 import PostCard from '@/components/PostCard';
 import EditPostModal from '@/components/EditPostModal';
 import EditInnovationModal from '@/components/EditInnovationModal';
@@ -47,7 +47,7 @@ export default function ProfilePage() {
     async function loadProfile() {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch('http://localhost:8000/api/users/profile/me', {
+        const res = await fetch(`${API_URL}/users/profile/me`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {
@@ -220,7 +220,7 @@ export default function ProfilePage() {
   const handleSaveProfile = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:8000/api/users/profile', {
+      const res = await fetch(`${API_URL}/users/profile`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

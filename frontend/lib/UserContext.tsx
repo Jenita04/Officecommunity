@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { API_URL } from './api';
 
 type UserData = {
   id: string;
@@ -39,7 +40,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchUserProfile = async (token: string) => {
     try {
-      const res = await fetch('http://localhost:8000/api/users/profile/me', {
+      const res = await fetch(`${API_URL}/users/profile/me`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (res.ok) {
@@ -56,7 +57,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const login = async (username: string, pass: string) => {
-    const res = await fetch('http://localhost:8000/api/auth/login', {
+    const res = await fetch(`${API_URL}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password: pass })
