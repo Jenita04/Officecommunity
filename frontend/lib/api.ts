@@ -1,4 +1,4 @@
-export const API_URL = 'https://kaartechapi.onrender.com/api';
+export const API_URL = 'https://kaartech-backend-api.onrender.com/api';
 
 export interface Comment {
   id: number;
