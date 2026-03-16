@@ -136,8 +136,8 @@ def upload_media(file: UploadFile = File(...), current_user: User = Depends(get_
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
             
-        # Return serving URL (assuming base URL is http://localhost:8000)
-        return {"media_url": f"http://localhost:8000/{file_path}"}
+        # Return serving URL (assuming base URL is https://kaartechapi.onrender.com)
+        return {"media_url": f"https://kaartechapi.onrender.com/{file_path}"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Upload failed: {str(e)}")
 

@@ -1,6 +1,6 @@
 import requests
 
-url = "http://localhost:8000/api/feed/"
+url = "https://kaartechapi.onrender.com/api/feed/"
 data = {
     "title": "Test Challenge",
     "description": "This is a test",
