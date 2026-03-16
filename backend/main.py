@@ -47,9 +47,9 @@ app.add_middleware(
         "https://kaartech-frontend.onrender.com",
         "https://kaartech-frontend1.onrender.com",
         "https://kaartech-frontend-v2.onrender.com", 
-        "*" # Temporarily allowing all until frontend is fully deployed to prevent CORS errors during setup. 
-            # Once you have your exact frontend URL, replace "*" with it or use the FRONTEND_URL env var.
-    ], 
+    ],
+    allow_origin_regex="https://.*\.onrender\.com", # Allow any onrender branch previews or variations
+
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
