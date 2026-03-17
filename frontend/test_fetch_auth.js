@@ -1,5 +1,5 @@
 // test_fetch_auth.js
-const API_URL = 'https://kaartechapi.onrender.com/api';
+const API_URL = 'https://kt-backend-upfd.onrender.com/api';
 // We'll first login to get a token
 async function run() {
   try {

@@ -1,5 +1,5 @@
 // test_fetch2.js
-const API_URL = 'https://kaartechapi.onrender.com/api';
+const API_URL = 'https://kt-backend-upfd.onrender.com/api';
 
 async function testFetch() {
   try {
