@@ -46,12 +46,12 @@ app.add_middleware(
         "http://localhost:3000", 
         "https://kaartech-frontend.onrender.com",
         "https://kaartech-frontend1.onrender.com",
+        "https://kaartech1-frontend.onrender.com",
         "https://kaartech-frontend-v2.onrender.com", 
-        "*"
     ],
     allow_origin_regex="https://.*\.onrender\.com", # Allow any onrender branch previews or variations
 
-    allow_credentials=False, # Must be False if allow_origins includes "*"
+    allow_credentials=True, 
     allow_methods=["*"],
     allow_headers=["*"],
 )
